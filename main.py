@@ -1,3 +1,30 @@
+def is_prime(num):
+    if num < 2:
+        return False
+    
+    if num == 2:
+        return True
+    
+    if num % 2 == 0 :
+        return False
+
+    # for i in range (3, int(num**0.5) +, 2):
+        if num % i == 0:
+            return False
+    return True
+
+count = 0
+prime_sum = 0
+num = 2
+
+while(count < 100):
+    if is_prime(num):
+        prime_sum += num
+        count += 1
+    num += 1
+
+print(prime_sum) 
+
 """ from fastapi import FastAPI
 import json
 
